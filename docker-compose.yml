@@ -10,11 +10,9 @@ services:
       DB_HOST: postgres
     ports:
       - 8000:8000
-    volumes:
-      - ./:/code
     depends_on: ["postgres"]
   postgres:
-    image: postgres
+    image: postgres:16
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
