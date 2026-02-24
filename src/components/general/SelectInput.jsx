@@ -7,9 +7,9 @@ export default function SelectInput({ label, options, className, value, setValue
     }
     
     return (
-        <div>
+        <div className="select-container">
             {label}
-            <select className={className} value={value} onChange={handleSelect}>
+            <select className={`select-field ${className}`} value={value} onChange={handleSelect}>
                 {options.map((option) => (
                     <option key={option} value={option}>{option}</option>
                 ))}

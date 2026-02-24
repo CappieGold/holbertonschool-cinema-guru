@@ -15,12 +15,12 @@ export default function Input({
     }
 
     return (
-        <div>
-            {label}
+        <div className="input-container">
             {icon}
+            {label}
             <input onChange={handleInput}
                 type={type}
-                className={className}
+                className={`input-field ${className}`}
                 value={value}
                 {...inputAttributes}
             />
