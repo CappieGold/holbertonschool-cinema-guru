@@ -1,10 +1,4 @@
-/* ============================================
-   CINEMA GURU - General Components CSS
-   Theme: Netflix-inspired dark UI
-   ============================================ */
-
 /* ---------- INPUT COMPONENT ---------- */
-/* Structure: <div> {label} {icon} <input /> </div> */
 
 .input-container {
     display: flex;
@@ -44,7 +38,6 @@
 }
 
 /* ---------- SELECT INPUT COMPONENT ---------- */
-/* Structure: <div> {label} <select><option/></select> </div> */
 
 .select-container {
     display: flex;
@@ -71,7 +64,7 @@
     font-size: 14px;
     cursor: pointer;
 
-    /* Chevron personnalisé */
+    /* Chevron */
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -91,7 +84,6 @@
 }
 
 /* ---------- BUTTON COMPONENT ---------- */
-/* Structure: <div> <button>{icon}{label}</button> </div> */
 
 .button-red {
     background-color: #e50914;
