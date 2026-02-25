@@ -16,8 +16,10 @@ export default function Input({
 
     return (
         <div className="input-container">
-            {icon}
-            {label}
+            <div className="input-label-row">
+                {icon}
+                {label}
+            </div>
             <input onChange={handleInput}
                 type={type}
                 className={`input-field ${className}`}

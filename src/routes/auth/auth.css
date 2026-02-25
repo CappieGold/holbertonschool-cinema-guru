@@ -1,0 +1,72 @@
+/* ---------- AUTH PAGE ---------- */
+
+.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1a1a1a;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 550px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------- TABS ---------- */
+
+.auth-tabs {
+    display: flex;
+}
+
+.auth-tabs > div {
+    flex: 1;
+}
+
+.auth-tabs > div > button {
+    width: 100%;
+    border-radius: 0;
+    justify-content: center;
+    padding: 14px 24px;
+    background-color: #BB000E;
+    opacity: 0.75;
+}
+
+.auth-tabs > div > button.active {
+    opacity: 1;
+    background-color: #E31C25;
+}
+
+/* ---------- FORM BODY ---------- */
+
+.auth-body {
+    background-color: #fff;
+    padding: 30px 40px;
+}
+
+.auth-body p {
+    text-align: center;
+    font-size: 20px;
+    color: #222;
+    margin-bottom: 24px;
+}
+
+.auth-body .input-container {
+    border-bottom-color: #e50914;
+}
+
+.auth-body .input-container svg {
+    color: #aaa;
+}
+
+.auth-body .input-field {
+    color: #222;
+}
+
+.auth-body > div > div:last-child {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+}
