@@ -22,7 +22,7 @@ export default function Register({ username, password, setUsername, setPassword 
                 setValue={setPassword}
                 icon={<FontAwesomeIcon icon={faKey} />}
             />
-            <Button icon={<FontAwesomeIcon icon={faPlus} />} label="Sign Up" />
+            <Button type='submit' icon={<FontAwesomeIcon icon={faPlus} />} label="Sign Up" />
         </div>
     )
 }

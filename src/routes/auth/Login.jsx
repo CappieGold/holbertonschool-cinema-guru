@@ -22,7 +22,7 @@ export default function Login({ username, password, setUsername, setPassword }) 
                 setValue={setPassword}
                 icon={<FontAwesomeIcon icon={faKey} />}
             />
-            <Button icon={<FontAwesomeIcon icon={faKey} />} label="Sign In" />
+            <Button type='submit' icon={<FontAwesomeIcon icon={faKey} />} label="Sign In" />
         </div>
     )
 }

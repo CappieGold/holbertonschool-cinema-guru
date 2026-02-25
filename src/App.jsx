@@ -8,7 +8,7 @@ export default function App() {
   const [userUsername, setUserUsername] = useState("")
 
   useEffect(() => {
-    const token = JSON.parse(localStorage.getItem('accessToken'))
+    const token = localStorage.getItem('accessToken')
     axios.post('/api/auth/', {}, {
       headers: {
         'Accept': 'application/json',
@@ -24,7 +24,7 @@ export default function App() {
 
   return (
     <div className="App">
-      {isLoggedIn ? <Dashboard /> : <Authentication />}
+      {isLoggedIn ? <Dashboard /> : <Authentication setIsLoggedIn={setIsLoggedIn} setUserUsername={setUserUsername} />}
     </div>
   )
 }
