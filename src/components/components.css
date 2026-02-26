@@ -1,0 +1,22 @@
+.activity-item {
+    color: #fff;
+    font-size: 13px;
+    margin-bottom: 14px;
+    line-height: 1.5;
+    list-style: none;
+}
+
+.activity-item p {
+    margin: 0;
+}
+
+.activity-username,
+.activity-title {
+    color: #E31C25;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.activity-date {
+    font-style: italic;
+}

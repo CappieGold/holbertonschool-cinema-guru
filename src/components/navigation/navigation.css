@@ -1,9 +1,14 @@
+/* ========== HEADER ========== */
+
 .header {
+    position: relative;
+    z-index: 200;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #161616;
-    padding: 10px 24px;
+    height: 56px;
+    padding: 0 24px;
 }
 
 .header-title {
@@ -41,4 +46,96 @@
 
 .logout:hover {
     opacity: 0.8;
+}
+
+/* ========== SIDEBAR ========== */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 56px;
+    width: 60px;
+    height: calc(100vh - 56px);
+    background-color: #BB000E;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar:hover {
+    width: 280px;
+}
+
+/* ---------- NAV ITEMS ---------- */
+
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav li {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    padding: 14px 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.sidebar-nav li:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+/*
+ * ASTUCE CLÉ : l'icône occupe exactement 60px (= largeur sidebar fermée)
+ * → 20px margin-left + 20px icône + 20px margin-right = 60px
+ * → le texte commence à 60px, pile à la limite du overflow: hidden
+ * → fermée = seule l'icône visible, ouverte = texte visible
+ */
+.sidebar-nav li svg {
+    font-size: 20px;
+    width: 20px;
+    min-width: 20px;
+    margin: 0 20px;
+    flex-shrink: 0;
+}
+
+/* ---------- ACTIVITIES TITLE ---------- */
+
+.sidebar-activities-title {
+    padding: 16px 20px 8px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: underline;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar:hover .sidebar-activities-title {
+    opacity: 1;
+}
+
+/* ---------- ACTIVITIES LIST ---------- */
+
+.sidebar-activities {
+    list-style: none;
+    padding: 12px 20px;
+    margin: 0;
+    overflow-y: auto;
+    flex: 1;
+    background-color: #2C2C2C;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar:hover .sidebar-activities {
+    opacity: 1;
 }

@@ -2,3 +2,8 @@
     min-height: 100vh;
     background-color: #222222;
 }
+
+.dashboard-content {
+    margin-left: 60px;
+    padding: 20px;
+}

@@ -37,8 +37,8 @@ export default function SideBar() {
     }, [])
 
     return (
-        <nav>
-            <ul>
+        <nav className="sidebar">
+            <ul className="sidebar-nav">
                 <li onClick={() => setPage("Home")}>
                     <FontAwesomeIcon icon={faFolder} />
                     Home
@@ -52,7 +52,8 @@ export default function SideBar() {
                     Watch Later
                 </li>
             </ul>
-            <ul>
+            <p className="sidebar-activities-title">Latest Activities</p>
+            <ul className="sidebar-activities">
                 {activities.slice(0, 10).map((activity) => (
                     <Activity key={activity.id} activity={activity} />
                 ))}
