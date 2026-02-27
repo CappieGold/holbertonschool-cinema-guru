@@ -1,20 +1,22 @@
 import { useState } from 'react'
 import './movies.css'
 
-export default function Tag({ genre, filter, genres, setgenres }) {
+export default function Tag({ genre, filter, genres, setGenres }) {
     const [selected, setSelected] = useState(false)
 
     function handleTag() {
         if (selected) {
-            setgenres(genres.filter((g) => g !== genre))
+            setGenres(genres.filter((g) => g !== genre))
             setSelected(false)
         } else {
-            setgenres([...genres, genre])
-            selected(true)
+            setGenres([...genres, genre])
+            setSelected(true)
         }
     }
 
     return (
-        <li onClick={handleTag}>{genre}</li>
+        <li className={`tag ${selected ? "tag-selected" : ""}`} onClick={handleTag}>
+            {genre}
+        </li>
     )
 }

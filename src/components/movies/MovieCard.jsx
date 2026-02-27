@@ -42,7 +42,7 @@ export default function MovieCard({ movie }) {
             }
         } else {
             if (isWatchLater) {
-                axios.delete(`/api/titles/watchlater/${movie.imdbId}`, {}, {
+                axios.delete(`/api/titles/watchlater/${movie.imdbId}`, {
                     headers: { Authorization: `Bearer ${token}` }
                 }).then(() => setIsWatchLater(false))
             } else {
@@ -54,12 +54,31 @@ export default function MovieCard({ movie }) {
     }
 
     return (
-        <li>
-            <FontAwesomeIcon icon={faStar} onClick={() => handleClick("favorite")} />
-            <FontAwesomeIcon icon={faClock} onClick={() => handleClick("watchlater")} />
-            {movie.title}
-            {movie.synopsis}
-            {movie.genres.join(", ")}
+        <li className="movie-card">
+            <div className="movie-card-image">
+                <img src={movie.imageurls?.[0]} alt={movie.title} />
+                <div className="movie-card-icons">
+                    <FontAwesomeIcon
+                        icon={faClock}
+                        className={`movie-icon ${isWatchLater ? "movie-icon-active" : ""}`}
+                        onClick={() => handleClick("watchlater")}
+                    />
+                    <FontAwesomeIcon
+                        icon={faStar}
+                        className={`movie-icon ${isFavorite ? "movie-icon-active" : ""}`}
+                        onClick={() => handleClick("favorite")}
+                    />
+                </div>
+            </div>
+            <div className="movie-card-info">
+                <h3 className="movie-card-title">{movie.title}</h3>
+                <p className="movie-card-synopsis">{movie.synopsis}</p>
+                <ul className="movie-card-genres">
+                    {movie.genres.map((genre) => (
+                        <li key={genre} className="movie-genre-tag">{genre}</li>
+                    ))}
+                </ul>
+            </div>
         </li>
     )
 }

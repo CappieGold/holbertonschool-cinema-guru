@@ -21,21 +21,24 @@ export default function Filter({
         "thriller", "war", "history", "sport", "sci-fi",
         "documentary", "crime", "fantasy"
     ]
+
     return (
-        <div>
-            <SearchBar title={title} setTitle={setTitle}/>
-            <Input label="Min Date:" type="number" value={minYear} setValue={setMinYear} />
-            <Input label="Max Date:" type="number" value={maxYear} setValue={setMaxYear} />
-            <SelectInput 
-                label="sort"
-                options={["latest", "oldest", "highestrated", "lowestrated"]}
-                value={sort}
-                setValue={setSort}
-            />
-            <ul>
-                {genresList.map((genre) => {
-                    <Tag key={genre} genre={genre} filter={true} genres={genres} setgenres={setGenres}/>
-                })}
+        <div className="filter-container">
+            <SearchBar title={title} setTitle={setTitle} />
+            <div className="filter-controls">
+                <Input label="Min Date:" type="number" value={minYear} setValue={setMinYear} />
+                <Input label="Max Date:" type="number" value={maxYear} setValue={setMaxYear} />
+                <SelectInput
+                    label="Sort:"
+                    options={["latest", "oldest", "highestrated", "lowestrated"]}
+                    value={sort}
+                    setValue={setSort}
+                />
+            </div>
+            <ul className="filter-tags">
+                {genresList.map((genre) => (
+                    <Tag key={genre} genre={genre} filter={true} genres={genres} setGenres={setGenres} />
+                ))}
             </ul>
         </div>
     )
