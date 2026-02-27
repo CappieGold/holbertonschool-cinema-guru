@@ -6,4 +6,19 @@
 .dashboard-content {
     margin-left: 60px;
     padding: 20px;
+    padding-top: 76px;
+}
+
+.dashboard-content h1 {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.load-more {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
 }

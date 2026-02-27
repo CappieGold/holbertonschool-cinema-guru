@@ -58,10 +58,12 @@ export default function HomePage() {
                     <MovieCard key={movie.imdbId} movie={movie} />
                 ))}
             </ul>
-            <Button label="Load More.." onClick={() => {
-                setPage(page + 1)
-                loadMovies(page + 1)
-            }} />
+            <div className="load-more">
+                <Button label="Load More.." onClick={() => {
+                    setPage(page + 1)
+                    loadMovies(page + 1)
+                }} />
+            </div>
         </div>
     )
 }

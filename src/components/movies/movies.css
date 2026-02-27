@@ -20,6 +20,12 @@
     margin-bottom: 0;
 }
 
+.filter-controls .input-container,
+.filter-controls .input-label-row,
+.filter-controls .select-container {
+    color: #fff;
+}
+
 /* ========== TAGS ========== */
 
 .filter-tags {
@@ -96,7 +102,7 @@
     object-fit: cover;
 }
 
-/* ---------- ICONS (top-right) ---------- */
+/* ---------- ICONS ---------- */
 
 .movie-card-icons {
     position: absolute;
@@ -146,6 +152,7 @@
     margin: 0 0 12px;
     display: -webkit-box;
     -webkit-line-clamp: 3;
+    line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }

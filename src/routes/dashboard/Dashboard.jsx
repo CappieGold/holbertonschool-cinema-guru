@@ -12,7 +12,7 @@ export default function Dashboard({ userUsername, setIsLoggedIn }) {
             <div className='dashboard'>
                 <Header userUsername={userUsername} setIsLoggedIn={setIsLoggedIn} />
                 <SideBar />
-                <div>
+                <div className="dashboard-content">
                     <Routes>
                         <Route path="/home" element={<HomePage />} />
                         <Route path="/favorites" element={<Favorites />} />

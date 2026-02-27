@@ -1,7 +1,10 @@
 /* ========== HEADER ========== */
 
 .header {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     z-index: 200;
     display: flex;
     align-items: center;
@@ -92,12 +95,6 @@
     background-color: rgba(0, 0, 0, 0.15);
 }
 
-/*
- * ASTUCE CLÉ : l'icône occupe exactement 60px (= largeur sidebar fermée)
- * → 20px margin-left + 20px icône + 20px margin-right = 60px
- * → le texte commence à 60px, pile à la limite du overflow: hidden
- * → fermée = seule l'icône visible, ouverte = texte visible
- */
 .sidebar-nav li svg {
     font-size: 20px;
     width: 20px;
